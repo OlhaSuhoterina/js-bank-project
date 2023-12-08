@@ -1,0 +1,47 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<div class="page">
+    <header>
+        {{> header-dark}}
+        {{> back-button}}
+    </header>
+
+    <form class="page-section">
+        <h1 class="page-title">Confirm account</h1>
+        <p class="page-subtitle"> Write the code you received</p>
+        <form class="form">
+            <div class="form-item">
+                {{> field action="signupConfirmForm.change" label="Code" type="number" name="code"
+                placeholder="code"}}
+                <span name="email" class="form-error">Error!</span>
+            </div>
+
+            <button onclick="signupConfirmForm.submit()" class="button button-disabled" type="button">Confirm</button>
+
+            <span class="alert alert-disabled ">Увага, помилка!</span>
+
+            <a href="/#" class="buttoN buttoN-disabled">Continue</a>
+
+            <span class="link-prefix"> Need code?
+                <a href="/signup-confirm" class="link" id="renew">
+                    Give me the code again
+                </a>
+            </span>
+
+
+        </form>
+
+    </form>
+
+
+</div>
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+    Адже наш layout/default.hbs має вже структуру HTML
+    }}

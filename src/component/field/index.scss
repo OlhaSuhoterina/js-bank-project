@@ -1,0 +1,43 @@
+@use '../../style' as s;
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(2);
+	
+
+	&-label {
+		font-size: 14px;
+		color: s.color('main');
+	}
+
+	&-input {
+		border: 1px solid s.color('grey');
+		background-color: s.color('box');
+
+		padding: s.space(4);
+		border-radius: 10px;
+		font-size: 14px;
+
+		&::placeholder {
+			color: s.color('lidht');
+		}
+		color: s.color('main');
+		transition: border-color 0.3s;
+
+		&:hover {
+			border-color: s.color('button');
+		}
+
+		&:focus {
+			border-color: s.color('button');
+		}
+		&:active{
+			border-color: s.color('button');
+		}
+
+		// &-error {
+		// 	border-color: s.color(red) !important;
+		// }
+	}
+}

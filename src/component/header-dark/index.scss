@@ -1,0 +1,14 @@
+@use '../../style' as s;
+
+
+.header{
+	padding: s.space(5);
+	display: flex;
+	
+	width: 100%;
+	justify-content: space-between;
+}
+.header-item{
+	color:s.color('dark') ;
+	font-weight: bold;
+}

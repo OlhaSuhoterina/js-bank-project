@@ -1,0 +1,36 @@
+@use '../../style' as s;
+
+@use '../../style/form.scss' as form;
+
+.buttoN {
+    // color: s.color('write');
+    // background: s.color('button');
+    padding: s.space(4) s.space(8);
+    border-radius: 10px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+
+
+    @include s.click;
+
+
+
+    &-success {
+        color: s.color('write');
+        background: s.color('button');
+          
+        @include s.click;
+
+        &:active {
+            opacity: 0.3;
+        }
+
+    }
+
+    &-disabled {
+        display: none;
+
+    }
+
+}

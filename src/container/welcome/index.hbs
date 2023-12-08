@@ -1,0 +1,39 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<main class="main">
+    <div class="page-welcome">
+        <header>
+            {{> header-light}}
+        </header>
+        <div class="page-welcome-description">
+            <h1 class="page-welcome-title">Hello!</h1>
+            <p class="page-welcome-subtitle">Welcome to bank app</p>
+
+            <img class="page-welcome-many" src="/svg/many.svg" alt="">
+        </div>
+
+
+
+    </div>
+    <div class="page-button">
+        <a href="/signup" class="button">Sign Up</a>
+        <a href="/signin" class="button button-light">Sign In</a>
+    </div>
+
+
+
+
+
+
+
+</main>
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+    Адже наш layout/default.hbs має вже структуру HTML
+    }}

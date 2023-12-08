@@ -1,0 +1,88 @@
+@use '../../style/' as s;
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: s.space(25);
+
+    
+}
+.page-welcome{
+    width: 383px;
+    height: 583px;
+    background-image: url('/img/background.jpg');   
+
+    border-radius: 30px;
+
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+
+
+    &-description{
+        display: flex;
+        flex-direction: column;
+        gap: s.space(4);
+        align-items: center;
+        padding-top: s.space(10) ;
+        
+
+    }
+    &-title{
+        font-size: 42px;
+        
+        color:s.color('write')
+
+    }
+    &-subtitle{
+        font-size: 20px;
+        color:s.color('write')
+    }
+
+    &-many{
+        position: relative;
+        top: -200px;
+        left: -50px;
+       
+    }
+    
+
+}  
+
+.page-button{
+    display: flex;
+    flex-direction: column;
+    gap: s.space(4);
+    align-items: center;
+    z-index: 2;
+
+}
+
+
+.button {
+    color: s.color(white);
+    background: s.color('button');
+    padding: s.space(4) s.space(8);
+    border-radius: 10px;
+    width: 90%;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    
+    
+    @include s.click;
+    
+    &:active {
+        opacity: 0.3;
+    }
+    &-light{
+        color: s.color('button');
+        background: s.color('write');
+        border: 1px solid  s.color('button');
+    }
+    
+
+}

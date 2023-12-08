@@ -1,0 +1,14 @@
+@use '../../style' as s;
+
+.heading-menu{
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.heading__info{
+	font-size: 16px;
+	color: #F3F5FF;
+	
+}

@@ -1,0 +1,39 @@
+@use '../../style/' as s;
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: s.space(25);
+
+    
+}
+.page-balance{
+    width: 383px;
+    height: 202px;
+    background-image: url('/img/balance.jpg');   
+
+    border-radius: 30px;
+}  
+
+.balance-wallet{
+    display: flex;
+    flex-direction: row;
+    gap: s.space(4);
+    justify-content: center;
+    padding-top: s.space(13);
+}
+
+.balance-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balance-name{
+    font-size: 14px;
+    color:s.color('main');
+  
+}
+

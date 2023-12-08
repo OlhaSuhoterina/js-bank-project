@@ -1,0 +1,120 @@
+@use './index' as s;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap:  s.space(3);
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        gap:  s.space(2);
+        width: 100%;
+    }
+
+    &-error {
+        color: s.color(red);
+        font-size: 12px;
+        display: none;
+
+        &-active {
+            display: block;
+        }
+    }
+
+}
+
+.button {
+    color: s.color('write');
+    background: s.color('button');
+    padding: s.space(4) s.space(8);
+    border-radius: 10px;
+    width: 100%;
+
+    @include s.click;
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    &-disabled {
+        opacity: 0.5;
+        cursor: default;
+
+        &:hover,
+        &:active {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+}
+
+.alert {
+    color: s.color('alert');
+    border-radius: 10px;
+    padding: 18px s.space(4);
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(242, 136, 61, 0.10);
+
+    display: flex;
+    flex-direction: row;
+    gap: s.space(2);
+
+
+    &-success {
+        border-color: s.color(green);
+        color: s.color(green);
+    }
+
+    &-progress {
+        border-color: s.color(blue);
+        color: s.color(blue);
+    }
+
+    &-error {
+        border-color: s.color(red);
+        color: s.color(red);
+    }
+
+    &-disabled {
+        display: none;
+    }
+
+
+
+}
+
+.validation {
+    &-active {
+        border-color: s.color(red) !important;   
+    }
+}
+
+.link {
+    color: s.color('button');
+    font-size: 14px;
+
+    @include s.click;
+}
+
+.link-prefix {
+    color: s.color('grey');
+    font-size: 14px; 
+    
+}
+
+.skeleton {
+    animation: skeleton-animation 1s infinite alternate;
+}
+
+@keyframes skeleton-animation {
+    from {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.15);   
+    }
+}

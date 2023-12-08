@@ -1,0 +1,52 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<main class="main">
+    <div class="page-balance">
+        <header>
+            {{> header-light}}
+            {{> heading-menu}}
+        </header>
+
+        <div class="balance-wallet">
+            <div class="balance-button">
+                <a href="/#">
+                    <img src="./svg/button-arrow.svg">
+                </a>
+                <p class="balance-name">Receive</p>
+            </div>
+            <div class="balance-button">
+                <a href="/#">
+                    <img src="./svg/button-send.svg">
+                </a>
+                <p class="balance-name">Send</p>
+            </div>
+
+
+        </div>
+        <div class="balance-description" id="user-item">
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</main>
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+    Адже наш layout/default.hbs має вже структуру HTML
+    }}
